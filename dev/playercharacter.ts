@@ -4,6 +4,7 @@ export class PlayerCharacter {
     private yspeed : number = 0
     private x : number = 40
     private y : number = 120
+    public spacePressed : boolean
 
     constructor(){
         const game = document.querySelector('game') as HTMLElement
@@ -17,6 +18,10 @@ export class PlayerCharacter {
         this.x += this.xspeed
         this.y += this.yspeed
         this.element.style.transform = `translate(${this.x}px, ${this.y}px)`
+    }
+
+    public getRectangle() {
+        return this.element.getBoundingClientRect()
     }
 
     private onKeyDown(e: KeyboardEvent): void {
@@ -37,6 +42,9 @@ export class PlayerCharacter {
             case "ARROWDOWN":
                 this.yspeed = 5
                 break
+            case " ":
+                this.spacePressed = true
+                break
         }
     }
 
@@ -53,6 +61,9 @@ export class PlayerCharacter {
             case "ARROWUP":
             case "ARROWDOWN":
                 this.yspeed = 0
+                break
+            case " ":
+                this.spacePressed = false
                 break
         }
     }

@@ -15,6 +15,9 @@ export class PlayerCharacter {
         this.y += this.yspeed;
         this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
     }
+    getRectangle() {
+        return this.element.getBoundingClientRect();
+    }
     onKeyDown(e) {
         switch (e.key.toUpperCase()) {
             case "A":
@@ -33,6 +36,9 @@ export class PlayerCharacter {
             case "ARROWDOWN":
                 this.yspeed = 5;
                 break;
+            case " ":
+                this.spacePressed = true;
+                break;
         }
     }
     onKeyUp(e) {
@@ -48,6 +54,9 @@ export class PlayerCharacter {
             case "ARROWUP":
             case "ARROWDOWN":
                 this.yspeed = 0;
+                break;
+            case " ":
+                this.spacePressed = false;
                 break;
         }
     }

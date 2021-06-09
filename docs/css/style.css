@@ -22,7 +22,7 @@ ui {
     font-size: 50px;
 }
 
-background, playercharacter, ui {
+background, playercharacter, ui, house1 {
     position: absolute;
     display: block;
     box-sizing:border-box;
@@ -41,4 +41,11 @@ playercharacter {
     background-repeat: no-repeat;
     width: 80px;
     height: 125px;
+}
+
+house1 {
+    background-image: url('../img/cube-moment.jpeg');
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
 }
