@@ -23,22 +23,19 @@ export class PlayerCharacter {
         switch (e.key.toUpperCase()) {
             case "A":
             case "ARROWLEFT" :
-                this.xspeed = -10
+                this.xspeed = -5
                 break
             case "D":
             case "ARROWRIGHT":
-                console.log(e)
-                this.xspeed = 10
+                this.xspeed = 5
                 break
             case "W":
             case "ARROWUP" :
-                console.log(e)
-                this.yspeed = -10
+                this.yspeed = -5
                 break
             case "S":
             case "ARROWDOWN":
-                console.log(e)
-                this.yspeed = 10
+                this.yspeed = 5
                 break
         }
     }
