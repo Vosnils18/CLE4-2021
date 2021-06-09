@@ -4,7 +4,13 @@ export class PlayerCharacter {
     private yspeed : number = 0
     private x : number = 40
     private y : number = 120
+    private tempX : number = 0
+    private tempY : number = 0
     public spacePressed : boolean
+    public getBoundingRect() : DOMRect {
+        return this.element.getBoundingClientRect()
+    }
+
 
     constructor(){
         const game = document.querySelector('game') as HTMLElement
@@ -15,8 +21,27 @@ export class PlayerCharacter {
     }
 
     public update(): void {
-        this.x += this.xspeed
-        this.y += this.yspeed
+        this.tempX = this.x + this.xspeed
+        this.tempY = this.y + this.yspeed
+
+        if(this.tempX < 0  || this.tempX > window.innerWidth - this.element.clientWidth) {
+            this.xspeed = 0
+        } 
+        else{
+            this.x += this.xspeed
+        }
+
+        if(this.tempY < 0  || this.tempY > window.innerHeight - this.element.clientHeight) {
+            this.yspeed = 0
+        } 
+        else{
+            this.y += this.yspeed
+        }
+
+        console.log(this.element.clientWidth)
+        console.log("test")
+        
+
         this.element.style.transform = `translate(${this.x}px, ${this.y}px)`
     }
 
