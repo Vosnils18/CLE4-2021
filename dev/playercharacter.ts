@@ -6,6 +6,7 @@ export class PlayerCharacter {
     private y : number = 120
     private tempX : number = 0
     private tempY : number = 0
+    
     public spacePressed : boolean
     public getBoundingRect() : DOMRect {
         return this.element.getBoundingClientRect()
@@ -37,11 +38,6 @@ export class PlayerCharacter {
         else{
             this.y += this.yspeed
         }
-
-        console.log(this.element.clientWidth)
-        console.log("test")
-        
-
         this.element.style.transform = `translate(${this.x}px, ${this.y}px)`
     }
 

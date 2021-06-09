@@ -30,8 +30,6 @@ export class PlayerCharacter {
         else {
             this.y += this.yspeed;
         }
-        console.log(this.element.clientWidth);
-        console.log("test");
         this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
     }
     getRectangle() {
