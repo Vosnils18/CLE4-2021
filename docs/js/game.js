@@ -16,6 +16,12 @@ class Game {
             requestAnimationFrame(() => this.gameLoop());
         }
     }
+    checkCollision(a, b) {
+        return (a.left <= b.right &&
+            b.left <= a.right &&
+            a.top <= b.bottom &&
+            b.top <= a.bottom);
+    }
 }
 new Game();
 //# sourceMappingURL=game.js.map

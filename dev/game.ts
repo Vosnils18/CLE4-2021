@@ -1,6 +1,8 @@
 import { PlayerCharacter } from "./playercharacter.js"
 import { UI } from "./ui.js"
 
+
+
 class Game {
     private playerCharacter : PlayerCharacter
     private ui : UI
@@ -19,10 +21,17 @@ class Game {
     gameLoop() {
         this.ui.update()
         this.playerCharacter.update()
+        
         if ( !this.paused ) {
             requestAnimationFrame(() => this.gameLoop())
         }
     }
+    private checkCollision(a: ClientRect, b: ClientRect) : boolean {
+        return (a.left <= b.right &&
+            b.left <= a.right &&
+            a.top <= b.bottom &&
+            b.top <= a.bottom)
+     }
 }
 
 new Game()
