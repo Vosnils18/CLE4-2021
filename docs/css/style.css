@@ -37,15 +37,17 @@ background {
 }
 
 playercharacter {
-    background-image: url('../img/cube-moment.jpeg');
+    background-image: url('../img/jesus.png');
     background-repeat: no-repeat;
+    background-size: contain;
     width: 80px;
     height: 125px;
 }
 
 house1 {
-    background-image: url('../img/cube-moment.jpeg');
+    background-image: url('../img/city-house-png.png');
     background-repeat: no-repeat;
+    background-size: contain;
     width: 150px;
     height: 150px;
 }
