@@ -13,6 +13,7 @@ class Game {
 
         this.playerCharacter.update()
         this.ui.update()
+        this.gameLoop()
     }
 
     gameLoop() {

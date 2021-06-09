@@ -7,6 +7,7 @@ class Game {
         this.paused = false;
         this.playerCharacter.update();
         this.ui.update();
+        this.gameLoop();
     }
     gameLoop() {
         this.ui.update();

@@ -4,34 +4,37 @@ export class PlayerCharacter {
         this.yspeed = 0;
         this.x = 40;
         this.y = 120;
-        window.addEventListener("keydown", (e) => this.onKeyDown(e));
-        window.addEventListener("keyup", (e) => this.onKeyUp(e));
         const game = document.querySelector('game');
         this.element = document.createElement("playercharacter");
         game.appendChild(this.element);
+        window.addEventListener("keydown", (e) => this.onKeyDown(e));
+        window.addEventListener("keyup", (e) => this.onKeyUp(e));
     }
     update() {
-        this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
         this.x += this.xspeed;
         this.y += this.yspeed;
+        this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
     }
     onKeyDown(e) {
         switch (e.key.toUpperCase()) {
             case "A":
             case "ARROWLEFT":
-                this.xspeed = -5;
+                this.xspeed = -10;
                 break;
             case "D":
             case "ARROWRIGHT":
-                this.xspeed = 5;
+                console.log(e);
+                this.xspeed = 10;
                 break;
             case "W":
             case "ARROWUP":
-                this.yspeed = -5;
+                console.log(e);
+                this.yspeed = -10;
                 break;
             case "S":
             case "ARROWDOWN":
-                this.yspeed = 5;
+                console.log(e);
+                this.yspeed = 10;
                 break;
         }
     }
