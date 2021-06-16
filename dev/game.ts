@@ -12,14 +12,14 @@ class Game {
     paused : boolean
 
     constructor(){
-        this.ui = new UI()
-        this.playerCharacter = new PlayerCharacter()
         this.houses = new Houses()
+        this.playerCharacter = new PlayerCharacter()
+        this.ui = new UI()
         this.paused = false
 
+        this.houses.update()
         this.playerCharacter.update()
         this.ui.update()
-        this.houses.update()
         this.gameLoop()
     }
 
