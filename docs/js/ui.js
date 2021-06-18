@@ -5,7 +5,7 @@ export class UI {
         game.appendChild(this.scoreField);
     }
     update() {
-        this.scoreField.innerHTML = `Score: 10`;
+        this.scoreField.innerHTML = `jesus is glad you are here`;
     }
 }
 //# sourceMappingURL=ui.js.map

@@ -36,7 +36,7 @@ class Game {
         this.hit = this.checkCollision(this.playerCharacter.getRectangle(), this.houses.getRectangle())
         if (this.hit && this.playerCharacter.spacePressed) {
             console.log("start level!")
-            
+            window.location.href="../docs/level1.html"
         }
         if ( !this.paused ) {
             requestAnimationFrame(() => this.gameLoop())

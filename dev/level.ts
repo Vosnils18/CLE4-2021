@@ -1,24 +1,21 @@
 import { PlayerCharacter } from "./playercharacter.js"
 import { UI } from "./ui.js"
 import { Houses } from "./houses.js"
+import { NPC } from "./npc.js"
 
 
 class Level {
     private playerCharacter : PlayerCharacter
-    private ui : UI
-    private houses : Houses
+    private npc : NPC
     hit : boolean
     paused : boolean
 
     constructor(){
-        this.houses = new Houses()
         this.playerCharacter = new PlayerCharacter()
-        this.ui = new UI()
+        this.npc = new NPC()
         this.paused = false
 
-        this.houses.update()
         this.playerCharacter.update()
-        this.ui.update()
         this.gameLoop()
     }
 
@@ -30,9 +27,11 @@ class Level {
     }
 
     gameLoop() {
-        this.ui.update()
         this.playerCharacter.update()
-        this.hit = this.checkCollision(this.playerCharacter.getRectangle(), this.houses.getRectangle())
+        this.hit = this.checkCollision(this.playerCharacter.getRectangle(), this.npc.getRectangle())
+        if (this.hit) {
+            console.log("laat hier de popup komen met letter en uitspreek zooi")
+        }
         if ( !this.paused ) {
             requestAnimationFrame(() => this.gameLoop())
         }

@@ -9,6 +9,6 @@ export class UI  {
     }
 
     public update() {
-        this.scoreField.innerHTML = `Score: 10`
+        this.scoreField.innerHTML = `jesus is glad you are here`
     }
 }
