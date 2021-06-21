@@ -7,15 +7,19 @@ import { NPC } from "./npc.js"
 class Level {
     private playerCharacter : PlayerCharacter
     private npc : NPC
+    private ui : UI
     hit : boolean
     paused : boolean
 
     constructor(){
         this.playerCharacter = new PlayerCharacter()
         this.npc = new NPC()
+        this.ui = new UI()
         this.paused = false
 
         this.playerCharacter.update()
+        this.npc.update()
+        this.ui.update()
         this.gameLoop()
     }
 
@@ -28,10 +32,17 @@ class Level {
 
     gameLoop() {
         this.playerCharacter.update()
+        this.npc.update()
+        this.ui.update()
+        
+        // collision check
         this.hit = this.checkCollision(this.playerCharacter.getRectangle(), this.npc.getRectangle())
         if (this.hit) {
             console.log("laat hier de popup komen met letter en uitspreek zooi")
+
         }
+
+        // pause check
         if ( !this.paused ) {
             requestAnimationFrame(() => this.gameLoop())
         }
