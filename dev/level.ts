@@ -9,8 +9,8 @@ let modelURL = 'https://teachablemachine.withgoogle.com/models/CUPka7Kfn/';
 
 class Level {
     private playerCharacter : PlayerCharacter
-    private npc : NPC
-    private ui : UI
+    public npc : NPC
+    public ui : UI
     hit : boolean
     paused : boolean
 
