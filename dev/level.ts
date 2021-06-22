@@ -1,6 +1,5 @@
 import { PlayerCharacter } from "./playercharacter.js"
 import { UI } from "./ui.js"
-import { Houses } from "./houses.js"
 import { NPC } from "./npc.js"
 
 

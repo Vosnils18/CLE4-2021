@@ -2,8 +2,6 @@ import { PlayerCharacter } from "./playercharacter.js"
 import { UI } from "./ui.js"
 import { Houses } from "./houses.js"
 
-
-
 class Game {
     private playerCharacter : PlayerCharacter
     private ui : UI

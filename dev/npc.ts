@@ -1,7 +1,7 @@
 export class NPC {
     private element : HTMLElement
-    private x : number = 350
-    private y : number = 370
+    private x : number = 130
+    private y : number = 300
 
     constructor(){
         const game = document.querySelector('game') as HTMLElement

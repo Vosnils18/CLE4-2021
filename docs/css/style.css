@@ -22,7 +22,7 @@ ui {
     font-size: 50px;
 }
 
-background, playercharacter, ui, house1 {
+background, playercharacter, ui, house1, npc1, textprompt {
     position: absolute;
     display: block;
     box-sizing:border-box;
@@ -44,10 +44,26 @@ playercharacter {
     height: 125px;
 }
 
+npc1 {
+    background-image: url('../img/satan.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 125px;
+}
+
 house1 {
     background-image: url('../img/city-house-png.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 150px;
     height: 150px;
+}
+
+.modal {
+    background-image: url('../img/Untitled-1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 900px;
+    height: 1199px;
 }
