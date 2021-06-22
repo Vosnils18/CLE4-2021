@@ -1,7 +1,11 @@
 import { PlayerCharacter } from "./playercharacter.js"
 import { UI } from "./ui.js"
 import { NPC } from "./npc.js"
-
+// For displaying the label
+let label = "waiting...";
+// The classifier
+let classifier;
+let modelURL = 'https://teachablemachine.withgoogle.com/models/CUPka7Kfn/';
 
 class Level {
     private playerCharacter : PlayerCharacter
