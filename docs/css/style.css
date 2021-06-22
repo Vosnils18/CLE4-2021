@@ -64,6 +64,10 @@ house1 {
     background-image: url('../img/Untitled-1.png');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 900px;
-    height: 1199px;
+    width: 100px;
+    height: 200px;
+}
+
+.-invis{
+    display : none;
 }

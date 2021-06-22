@@ -38,6 +38,9 @@ class Level {
         this.hit = this.checkCollision(this.playerCharacter.getRectangle(), this.npc.getRectangle())
         if (this.hit) {
             console.log("laat hier de popup komen met letter en uitspreek zooi")
+            this.ui.textPrompt.classList.remove("-invis")
+            this.paused = true
+            this.ui.modalContent.innerText = "m"
 
         }
 

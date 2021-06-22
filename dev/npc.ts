@@ -1,7 +1,7 @@
 export class NPC {
     private element : HTMLElement
-    private x : number = 130
-    private y : number = 300
+    private x : number = 600
+    private y : number = 600
 
     constructor(){
         const game = document.querySelector('game') as HTMLElement
@@ -11,6 +11,7 @@ export class NPC {
 
     public update(): void {
         this.element.style.transform = `translate(${this.x}px, ${this.y}px)`
+        
     }
 
     public getRectangle() {

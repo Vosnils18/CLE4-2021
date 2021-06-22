@@ -1,13 +1,13 @@
 export class UI  {
     private ui: HTMLElement
     public textPrompt: HTMLElement
-    private modalContent : HTMLElement
+    public modalContent : HTMLElement
 
     constructor() {
-        const game = document.querySelector('game') as HTMLElement
+        const body = document.querySelector('body') as HTMLElement
         
         this.ui = document.createElement("ui")
-        game.appendChild(this.ui)
+        body.appendChild(this.ui)
 
         this.textPrompt = document.createElement("textprompt")
         this.textPrompt.classList.add("-invis")
