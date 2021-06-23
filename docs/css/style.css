@@ -42,24 +42,24 @@ playercharacter {
     background-image: url('../img/lampie.png');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 80px;
-    height: 125px;
+    width: 200px;
+    height: 250px;
 }
 
 npc1 {
     background-image: url('../img/maan\ Moemo.png');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
 }
 
 house1 {
     background-image: url('../img/Mama\ Moemo.png');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
 .modal {

@@ -1,7 +1,7 @@
 export class NPC {
     constructor() {
-        this.x = 600;
-        this.y = 600;
+        this.x = 800;
+        this.y = 300;
         const game = document.querySelector('game');
         this.element = document.createElement("npc1");
         game.appendChild(this.element);
