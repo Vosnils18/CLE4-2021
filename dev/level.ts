@@ -26,6 +26,10 @@ class Level {
         this.gameLoop()
     }
 
+    preload() {
+        classifier = ml5.soundClassifier(modelURL + 'model.json')
+    }
+
     checkCollision(a: ClientRect, b: ClientRect) {
         return (a.left <= b.right &&
             b.left <= a.right &&

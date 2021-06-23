@@ -31,7 +31,7 @@ background, playercharacter, ui, house1, npc1, textprompt {
 }
 
 background {
-    background-image: url('../img/grass.jpeg');
+    background-color: #FFF;
     background-position: bottom center;
     background-size: cover;
     width: 100vw;
@@ -39,7 +39,7 @@ background {
 }
 
 playercharacter {
-    background-image: url('../img/jesus.png');
+    background-image: url('../img/lampie.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
@@ -47,15 +47,15 @@ playercharacter {
 }
 
 npc1 {
-    background-image: url('../img/satan.png');
+    background-image: url('../img/maan\ Moemo.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 125px;
+    height: 80px;
 }
 
 house1 {
-    background-image: url('../img/city-house-png.png');
+    background-image: url('../img/Mama\ Moemo.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 150px;
